@@ -1,0 +1,41 @@
+<header>
+    <nav>
+      <ul class="nav-bar" [ngClass]="{ 'scrolled': isScrolled }">
+        <li class="logo">
+          <a routerLink="home" style="text-decoration: none; color: white;">
+            <h3 style="margin-bottom: 0;">WebShen</h3>
+          </a>
+        </li>
+        <input type="checkbox" id="check" />
+        <span class="menu" >
+          <ng-container class="ease-in">
+            <li>
+              <a routerLink="home" routerLinkActive="active">მთავარი</a>
+            </li>
+            <li >
+              <a routerLink="profile" routerLinkActive="active">პროფილი</a>
+            </li>
+            <li >
+              <a routerLink="login" routerLinkActive="active">ავტორიზაცია</a>
+            </li>
+            <li >
+              <a >გასვლა</a>
+            </li>
+            <li>
+              <div>
+                <input type="checkbox" class="checkbox" id="checkbox">
+                <label for="checkbox" class="checkbox-label">
+                  <i class="fas fa-moon"></i>
+                  <i class="fas fa-sun"></i>
+                  <span class="ball"></span>
+                </label>
+              </div>
+            </li>
+          </ng-container>
+          <label for="check" class="close-menu"><i class="fas fa-times"></i></label>
+        </span>
+        <label for="check" class="open-menu" style="margin-right: 11px;"><i class="fas fa-bars"></i></label>
+      </ul>
+    </nav>
+  </header>
+  

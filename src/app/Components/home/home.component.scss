@@ -1,0 +1,142 @@
+
+.intro {
+
+    height: auto;
+    padding: 70px 30px 30px 30px;
+    max-height: 140vh;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    background: linear-gradient(135deg, #1b335a 0%, #215199 100%);
+    transition: all 0.2s ease-in-out;
+
+}
+.objective {
+    display: inline-block;
+    transition: opacity 0.5s ease-in-out;
+    opacity: 1;
+  }
+  
+  .fade {
+    animation: fadeInOut 0.5s ease-in-out !important;
+  }
+  
+  @keyframes fadeInOut {
+    0% { opacity: 0; transform: translateY(-10px);}
+    100% { opacity: 1; }
+  }
+.left, .right {
+    flex: 1 1 50%;  
+    min-width: 300px;  
+}
+.right {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    img{
+    width: 100%;
+    max-width: 600px; /* Optional limit for large screens */
+    height: auto;
+    border-radius: 15px;
+    object-fit: cover;
+    }
+}
+
+.left{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-right: 20px;
+    color: white;
+}
+
+
+.info-boxes {
+    padding: 0px 30px 30px 30px;
+    height: 60vh; // Let content decide height
+    transition: all 0.2s ease-in-out;
+
+    .header {
+        padding-top: 50px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        p{
+            color: rgb(161, 161, 161);
+        }
+    }
+
+    .box-container {
+        padding-top: 50px;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px;
+        justify-content: center;
+        margin-top: 30px;
+
+        .box {
+            flex: 1 1 calc(25% - 20px); // 4 boxes per row, minus the gap
+            min-width: 250px; // Ensure readable size on mobile
+            height: auto;
+            border: 1px solid #e0e0e0; // Light gray border like in the image
+            border-radius: 12px; // Rounded corners
+            background-color: rgb(241, 241, 241); // White background
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05); // Soft, subtle shadow
+            font-weight: bold;
+            padding: 25px;
+            transition: box-shadow 0.3s ease, transform 0.3s ease;
+        
+            &:hover {
+                box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1); // Slight lift on hover
+                transform: translateY(-4px); // Optional: lift effect
+                border: 1px solid #00CDBD;
+            }
+        
+            .box-header {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                font-size: 70px;
+            }
+            .box-body{
+                text-align: center;
+                font-weight: normal;
+                color: rgb(161, 161, 161);
+            }
+        }
+        
+    }
+
+    @media screen and (max-width: 768px) {
+        .box-container {
+            .box {
+                flex: 1 1 calc(50% - 20px); // 2 per row on tablet/mobile
+            }
+        }
+    }
+
+    @media screen and (max-width: 480px) {
+        .box-container {
+            .box {
+                flex: 1 1 100%; // Full width on small screens
+            }
+        }
+    }
+}
+
+@media (min-width: 2000px) {
+    .intro, .info-boxes{
+      padding: 0px 300px 0px 300px !important;
+    }
+}
+
+.sky-blue-text{
+    color: #00CDBD;
+}
+.bg-sky-blue{
+    background-color: #00CDBD;
+    color: white;
+}
