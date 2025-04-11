@@ -53,7 +53,8 @@
 
 .info-boxes {
     padding: 0px 30px 30px 30px;
-    height: 60vh; // Let content decide height
+    margin-bottom: 50px !important;
+    height: auto; // Let content decide height
     transition: all 0.2s ease-in-out;
 
     .header {
@@ -69,7 +70,7 @@
     }
 
     .box-container {
-        padding-top: 50px;
+        padding-top: 30px;
         display: flex;
         flex-wrap: wrap;
         gap: 20px;
